@@ -19,7 +19,6 @@ defmodule Worker do
     if now > state.deadline do
       Logger.info("#{state.loops_done} units of work done, updating hash counter")
 
-      # Redis.incrby("hashes", state.loops_done)
       Redix.command(:redix, ["INCRBY", "hashes", state.loops_done])
 
       new_state = %{state | loops_done: 0, deadline: now + interval * 1_000}
@@ -44,7 +43,6 @@ defmodule Worker do
     if String.starts_with?(hex_hash, "0") do
       Logger.info("Coin found: #{String.slice(hex_hash, 0..7)}...")
 
-      # created = Redis.hset("wallet", hex_hash, random_bytes)
       {:ok, created} = Redix.command(:redix, ["HSET", hex_hash, random_bytes])
 
       if !created do
@@ -56,15 +54,16 @@ defmodule Worker do
   end
 
   defp get_random_bytes() do
-    {:ok, response} = HTTPoison.get("http://rng/32")
+    {:ok, response} = Req.get("http://rng/32")
+
     response.body
   end
 
   defp hash_bytes(data) do
     {:ok, response} =
-      HTTPoison.post(
+      Req.post(
         "http://hasher/",
-        data,
+        body: data,
         headers: [{"Content-Type", "application/octet-stream"}]
       )
 
