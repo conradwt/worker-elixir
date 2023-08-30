@@ -5,7 +5,7 @@ defmodule Worker.MixProject do
     [
       app: :worker,
       version: "0.1.0",
-      elixir: "~> 1.15.4",
+      elixir: "~> 1.15.5",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -22,8 +22,8 @@ defmodule Worker.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 2.1"},
-      {:redix, "~> 1.2.3"}
+      {:redix, "~> 1.2.3"},
+      {:req, "~> 0.3.11"}
     ]
   end
 end
