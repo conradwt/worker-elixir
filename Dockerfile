@@ -12,7 +12,7 @@
 #   - https://pkgs.org/ - resource for finding needed packages
 #   - Ex: hexpm/elixir:1.14.2-erlang-25.1.2-debian-bullseye-20221004-slim
 #
-ARG ELIXIR_VERSION=1.15.4
+ARG ELIXIR_VERSION=1.15.5
 ARG OTP_VERSION=26.0.2
 ARG DEBIAN_VERSION=bullseye-20230612-slim
 
@@ -25,7 +25,7 @@ FROM ${BUILDER_IMAGE} as builder
 LABEL org.opencontainers.image.authors=conradwt@gmail.com
 LABEL org.opencontainers.image.created=$CREATED_DATE
 LABEL org.opencontainers.image.revision=$SOURCE_COMMIT
-LABEL org.opencontainers.image.title="Hasher Elixir"
+LABEL org.opencontainers.image.title="Worker Elixir"
 LABEL org.opencontainers.image.url=https://hub.docker.com/u/conradwt/worker-elixir
 LABEL org.opencontainers.image.source=https://github.com/conradwt/worker-elixir
 LABEL org.opencontainers.image.licenses=MIT
