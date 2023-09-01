@@ -7,11 +7,6 @@ defmodule Worker.Application do
 
   @impl true
   def start(_type, _args) do
-    Logger.configure(
-      backends: [{LoggerFileBackend, :error_log}, {LoggerConsoleBackend, :console}],
-      level: :debug
-    )
-
     children = [
       {Redix, name: :redix},
       {Worker, []}
