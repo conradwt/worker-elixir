@@ -64,7 +64,9 @@ defmodule Worker do
       Req.post(
         "http://hasher/",
         body: data,
-        headers: [{"Content-Type", "application/octet-stream"}]
+        headers: [
+          %{"Content-Type" => ["application/octet-stream"]}
+        ]
       )
 
     response.body
