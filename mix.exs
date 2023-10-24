@@ -22,8 +22,8 @@ defmodule Worker.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:redix, "~> 1.2.3"},
-      {:req, "~> 0.4.0"}
+      {:redix, "~> 1.2.4"},
+      {:req, "~> 0.4.4"}
     ]
   end
 end
