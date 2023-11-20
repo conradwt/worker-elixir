@@ -5,7 +5,7 @@ defmodule Worker.MixProject do
     [
       app: :worker,
       version: "0.1.0",
-      elixir: "~> 1.15.5",
+      elixir: "~> 1.15.7",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -23,7 +23,7 @@ defmodule Worker.MixProject do
   defp deps do
     [
       {:redix, "~> 1.2.4"},
-      {:req, "~> 0.4.4"}
+      {:req, "~> 0.4.5"}
     ]
   end
 end
