@@ -9,7 +9,7 @@
       ]
     }
   },
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": "compose.yml",
   "features": {
     "ghcr.io/devcontainers-contrib/features/k6:1": {},
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
