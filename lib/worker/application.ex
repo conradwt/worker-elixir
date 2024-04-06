@@ -9,7 +9,7 @@ defmodule Worker.Application do
   def start(_type, _args) do
     children = [
       {Redix, name: :redix},
-      {Worker, []}
+      {Worker, %{}}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
