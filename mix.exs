@@ -23,7 +23,8 @@ defmodule Worker.MixProject do
   defp deps do
     [
       {:redix, "~> 1.3.0"},
-      {:req, "~> 0.4.14"}
+      {:req, "~> 0.4.14"},
+      {:credo, "~> 1.7.6", only: [:dev, :test], runtime: false}
     ]
   end
 end
