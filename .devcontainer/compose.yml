@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         # Elixir Version: 1.9, 1.10, 1.10.4, ...
-        VARIANT: '1.17.0-rc.0'
+        VARIANT: '1.17.0'
 
     volumes:
       - ..:/workspace:cached
