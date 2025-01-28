@@ -5,7 +5,7 @@ defmodule Worker.MixProject do
     [
       app: :worker,
       version: "0.1.0",
-      elixir: "~> 1.18.1",
+      elixir: "~> 1.18.2",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
