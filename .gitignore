@@ -24,3 +24,7 @@ worker-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Exclude VSCode artifacts
+.metals/
+.vscode/

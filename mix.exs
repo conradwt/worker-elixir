@@ -24,7 +24,7 @@ defmodule Worker.MixProject do
     [
       {:redix, "~> 1.3.0"},
       {:req, "~> 0.5.15"},
-      {:credo, "~> 1.7.15", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7.16", only: [:dev, :test], runtime: false}
     ]
   end
 end
